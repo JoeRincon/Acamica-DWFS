@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
+    /*----------header mobile---------- */
+
+  .logo {
+    display: block;
+    float: left;
+    padding: 10px;
+    margin-left: 6px;
+    height: 24px;
+    width: 24px;
+}
+
+  .header {
+    background-color:white;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 3;
+  }
+ 
+  .header ul {
+    margin: 0;
+    padding: 0;
+    height: 224px;
+    overflow: hidden;
+    background: #0000EC;
+    font-family:'IBM Plex Mono', monospace;
+    position: relative;
+    
+  }
+
+  .header li a {
+    display: block;
+    padding: 14px 14px;
+    color: white;
+    line-height: 28px;
+  }
+
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+   /* menu icon */
+  
+   .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 18px 12px;
+    position: relative;
+    user-select: none;
+    margin-right: 20px;
+  }
+ 
+  .header .menu-icon .nav-icon {
+    background: #060A24;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+    margin-right: 4px;
+  }
+
+  .header .menu-icon .nav-icon:before,
+  .header .menu-icon .nav-icon:after {
+    background: #060A24;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  .header .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+  
+  /*-----------------cabecera mobile------------------*/
+
+#cabecera {
+  padding-top: 73px;
+  background: white;
+  margin-bottom: 68px;
+}
+
+#cabecera h1 {
+    font-family:'IBM Plex Sans', monospace;
+    font-size: 36px;
+    color: #060A24;
+    line-height: 42px;
+    font-weight: 400;
+    margin-left: 16px;
+    width: 70%;
+    padding-top: 41px;
+    margin-top: 20px;
+}
+
+#tachado {
+    text-decoration: line-through;
+}
+
+.p-cabecera {
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: #060A24;
+    line-height: 22px;
+    font-weight: 500;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 90%;
+    padding-bottom: 36px;
+    padding-top: 16px;
+    text-align: justify;
+}
+
+.btn-cabecera {
+    font-family:'IBM Plex Sans', monospace;
+    font-size: 16px;
+    color: #060A24;
+    background-color: #00F3BB;
+    line-height: 22px;
+    font-weight: 500;
+    margin-left: 5%;
+    padding: 13px 35%;
+    width: 90%;
+    height: 48px;
+    margin-bottom: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-cabecera:hover {
+  background: linear-gradient(90deg, #00F0B8,  #0000FE);
+  color: white;
+}
+
+/*----------Episodios Mobile------------*/
+
+#episodios {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  transform: skewY(-5deg);
+  margin-top: 24px;
+}
+
+#episodios h1 {
+  font-family:'IBM Plex Sans', monospace;
+  font-size: 36px;
+  width: 157px;
+  color: white;
+  line-height: 42px;
+  font-weight: 400;
+  margin-left: 5%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  transform: skewY(5deg);
+}
+.pods-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  padding-bottom: 143px;
+  transform: skewY(5deg);
+}
+
+.pod {
+  width: 92%;
+  height: 232px;
+  border: none;
+  padding-bottom: 10px;
+  border: none;
+}
+
+/*------Imagen Telefono Mobile-------*/
+
+.foto-phone img {
+margin-top: -95px;
+position: relative;
+width: 100%;
+}
+
+/*------Seccion Nosotros Mobile----*/
+
+.nos-h1 {
+  font-family:'IBM Plex Sans', monospace;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  font-weight: 400;
+  margin: 0 16px;
+  width: 90%;
+  padding-top: 27px;
+  padding-bottom: 8px;
+  height: 84px;
+}
+
+.nos-p {
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: #060A24;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 0 16px;
+  width: 90%;
+  padding-bottom: 54px;
+}
+/*----Invitados Mobile-------*/
+
+.inv-h1 {
+  font-family:'IBM Plex Sans', monospace;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  font-weight: 400;
+  margin: 0 16px;
+  width: 90%;
+  padding-bottom: 14px;
+  height: 84px;
+}
+
+.inv-fotos {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+/*----Temas Mobile-------*/
+.temas-h1 {
+font-family:'IBM Plex Sans', monospace;
+font-size: 36px;
+color: #060A24;
+line-height: 42px;
+font-weight: 400;
+margin: 0 16px;
+width: 90%;
+margin-top: 48px;
+margin-bottom: 37px;
+height: 84px;
+}
+
+.iconos  {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+font-family:'IBM Plex Sans', monospace;
+font-size: 24px;
+color: #060A24;
+line-height: 32px;
+font-weight: 400;
+}
+
+.iconos h3 {
+margin-top: 13px;
+margin-bottom: 65px;
+}
+
+/*----Novedades Mobile-------*/
+#novedades {
+
+height: 100%;
+background-image: linear-gradient(225deg, #0000FF, #0000A3 );
+
+clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.nov-h1 {
+color: white;
+font-family:'IBM Plex Sans', monospace;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+font-weight: 400;
+width: 90%;
+margin: 0 16px;
+height: 126px;
+padding-top: 64px;
+padding-bottom: 70px;
+}
+
+.nov-btn {
+  font-family:'IBM Plex Sans', monospace;
+    font-size: 16px;
+    color: #060A24;
+    background-color: #00F3BB;
+    line-height: 22px;
+    font-weight: 500;
+    margin-left: 5%;
+    padding: 13px 25%;
+    height: 48px;
+    outline: none;
+    cursor: pointer;
+}
+
+.nov-btn:hover {
+  background: linear-gradient(90deg, #00F0B8,  #0000FE);
+  color: white;
+}
+
+#nov-btn {
+  padding-bottom: 60px;
+}
+/*----Footer Mobile-------*/
+
+.footer-p {
+font-size: 14px;
+line-height: 22px;
+font-family:'IBM Plex Mono', monospace;
+margin: 24px 14.4%;
+text-align: center;
+}
+
+.rrss {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+font-size: 16px;
+line-height: 28px;
+color: #060A24;
+margin-bottom: 16px;
+}
+
+.rrss a i {
+color: #060A24;
+}
+
+/* -----------48em = 768px @ 16pt font -----------*/
+  
+   @media (min-width: 768px) {
+
+/*---------------menu Desktop------------------*/
+.logo {
+    height: 36px;
+    width: 36px;
+    margin-left: 90px;
+  }
+
+.header {
+    height: 80px;
+    
+    padding: 0px;
+    z-index: 3;    
+  }
+
+.header li {
+    float: left;
+  }
+
+.header li a {
+    color: #060A24;
+    padding: 14px 24px;
+  }
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: 80px;
+    background: white;
+    margin-right: 76px;
+  }
+
+.header .menu-icon {
+    display: none;
+  } 
+
+.header ul a:hover {
+    text-decoration: line-through;
+    color: #00F3BB;
+  }
+
+/*--------cabecera Desktop-------*/
+#punto {
+    color: blue;
+  }
+
+#cabecera {
+   
+    top: 200px;
+    left: 200px;
+    padding-bottom: 40px;
+  }
+#cabecera h1 {
+    font-size: 64px;
+    padding-top: 0;
+    line-height: 84px;
+    font-weight: 400;
+    margin-left: 200px;
+  }
+#cabecera p {
+  margin-left: 200px;
+  width: 628px;
+}
+#cabecera h1 br {
+    display: none;
+  }
+
+.btn-cabecera {
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 200px;
+  padding: 16px 59px;
+}
+
+/*------Episodios Desktop--------*/
+#episodios {
+  padding-bottom: 233px;
+}
+
+#episodios h1 {
+  margin-left: 200px;
+  font-size: 48px;
+  line-height: 62px;
+  width: 14.5%;
+  margin-bottom: 26px;
+}
+
+.pods-grupo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+.pod {
+  width: 40.5%;
+  height: 232px;
+  padding: 30px;  
+  border: none;
+}
+
+/*------Foto cell Desktop-------*/
+.foto-phone img {
+  margin-top: -168px;
+  position: relative;
+  width: 31%;
+  margin-left: 200px;
+}
+
+/*------Nosotros Desktop-------*/
+#nosotros {
+  width: 464px;
+  margin-left: 48%;
+  margin-top: -456px;
+  height: 204px;
+}
+
+.nos-h1 br {
+  display: none;
+}
+
+.nos-p {
+  margin: 0;
+}
+.nos-h1 {
+font-size: 48px;
+line-height: 62px;
+width: 399px;
+padding: 0;
+margin: 0;
+}
+/*------Invitados Desktop-------*/
+#invitados {
+  padding-top: 544px;
+}
+
+.inv-fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}  
+
+.inv-h1 br{
+  display: none;
+}
+
+/*--------Temas Desktop------*/
+
+.temas-h1 br {
+  display: none;
+}
+
+.iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 14%;
+}
+
+/*--------Novedades Desktop-------*/
+#novedades {
+  padding-bottom: 150px;
+}
+
+.nov-h1 br {
+  display: none;
+}
+
+.nov-btn {
+  width: 24%;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 38%;
+  padding: 13px 52px;
+ }
+
+.nov-h1 {
+ width: 48%;
+ margin-left: 26%;
+ height: 62px;
+ font-size: 48px;
+ padding-top: 113px;
+}
+
+#nov-btn {
+  padding-bottom: 0;
+}
+
+/*--------Footer Desktop-------*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-p {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 36px 6.9%;
+}
+
+.rrss {
+   margin: 36px 6.9%;
+}
+  
+.rrss a i {
+  margin-left: 36px;
+}
+
+}
+ 
